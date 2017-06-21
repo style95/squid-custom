@@ -20,7 +20,7 @@ docker run -d -p 3128:3128 style95/squid:3.5.26-custom
 
 ## Warning
 
-This is designed for special case.<br>
+This is designed for a very special case.<br>
 It will retry maximum 10 times with 10 seconds interval.<br>
 So it will spent maximum 100 seconds to open connection to the backend server.
 
