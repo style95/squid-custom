@@ -15,7 +15,7 @@ WORKDIR /root/squid-3.5.26
 
 ## Add retry-delay on connection error
 RUN sed -i 's/#include <cerrno>/#include <cerrno>\n#include <unistd.h>/g' src/comm/ConnOpener.cc
-RUN sed -i 's/debugs(5, 5, HERE << conn_ << "\: \* - try again");/debugs(5, 5, HERE << conn_ << ": * - try again");\n            sleep(10);/g' src/comm/ConnOpener.cc
+RUN sed -i 's/debugs(5, 5, HERE << conn_ << "\: \* - try again");/debugs(5, 5, HERE << conn_ << ": * - try again");\n            sleep(7);/g' src/comm/ConnOpener.cc
 
 RUN ./configure \
       --prefix=/usr \
